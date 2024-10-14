@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://www.ultrajhakaas.com/categories-sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.ultrajhakaas.com/movie-listing-sitemap.xml</loc> 
+  </sitemap>
+  <sitemap>
+    <loc>https://www.ultrajhakaas.com/natak-listing-sitemap.xml</loc> 
+  </sitemap>
+  <sitemap>
+    <loc>https://www.ultrajhakaas.com/shows-series-listing-sitemap.xml</loc> 
+  </sitemap>
+  <sitemap>
+    <loc>https://www.ultrajhakaas.com/static-sitemap.xml</loc> 
+  </sitemap>
+  <sitemap>
+    <loc>https://www.ultrajhakaas.com/shows-episodes-listing-sitemap.xml</loc> 
+  </sitemap>
+</sitemapindex>

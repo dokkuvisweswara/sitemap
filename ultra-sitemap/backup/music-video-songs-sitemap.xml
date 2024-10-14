@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+   <url>
+     <loc>https://www.ultrajhakaas.com/movie/dum-dum-diga-diga/chaqresarazt</loc>
+     <lastmod>DATE</lastmod>
+     <changefreq>Weekly</changefreq>
+     <priority>1.0</priority>
+     <image:image>
+      <image:loc>IMAGE LOCATION</image:loc>
+     </image:image>
+     <video:video>
+       <video:thumbnail_loc>THUMBNAIL IMAGE LOCATION</video:thumbnail_loc>
+       <video:title>Dum Dum Diga Diga</video:title>
+       <video:description>
+         MOVIE DESCRIPTION SYNOPSIS
+       </video:description>
+       <video:content_loc>
+          http://streamserver.example.com/video123.mp4  (LOCATION PATH OF VIDEO UPLOADED)
+       </video:content_loc>
+       <video:player_loc>
+         https://www.example.com/videoplayer.php?video=123  (EMBED LOCATION PATH)
+       </video:player_loc>
+       <video:requires_subscription>yes OR no</video:requires_subscription>
+     </video:video>     
+   </url>
+</urlset>
