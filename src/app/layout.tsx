@@ -21,8 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>  
         <div className="min-h-screen flex flex-col">      
-          <header className="flex justify-between w-full mx-auto h-16 gradient-border-image text-white items-center p-9">
-            <nav className="container mx-auto flex gap-4 items-center">
+          <header className="flex justify-between w-full mx-auto h-16 gradient-border-image text-white items-center">
+            <nav className="container mx-auto h-full flex gap-4 items-center w-main">
               <div className="logo">
                 <Image src={Logo} alt="webbus" width="143" height="80" />
               </div>
@@ -36,8 +36,8 @@ export default function RootLayout({
           <main className="container mx-auto main-container-min-hight">
             {children}
           </main> 
-          <footer className="gradient-border-image text-white p-4">
-            <div className="container mx-auto text-center">
+          <footer className="gradient-border-image text-white h-16">
+            <div className="container h-full text-center w-main m-auto">
                 &copy; {new Date().getFullYear()} My Website. All rights reserved.
             </div>
           </footer>

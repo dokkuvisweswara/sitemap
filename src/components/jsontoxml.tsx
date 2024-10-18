@@ -71,7 +71,7 @@ export default function JsonToXml({params}: any) {
                     </button>
                     </div>
                     <br />
-                    <textarea value={xmlContent} readOnly rows={20} cols={80} className='w-full'></textarea>
+                    <textarea value={xmlContent} readOnly rows={20} cols={80} className='w-full text-black'></textarea>
                     <br />
                 </div>
             )}
