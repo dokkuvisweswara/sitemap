@@ -40,18 +40,18 @@ const CsvUpload = () => {
         </div> */}
         <br />
       <h1 className="text-3xl font-bold mb-4">Upload JSON to Format</h1>
-      <input type="file" accept=".csv" onChange={handleFileChange} />
+      <input className="cursor-pointer" type="file" accept=".csv" onChange={handleFileChange} />
       <div className='flex gap-4'>
-        {jsonData && (
+        {/* {jsonData && (
             <div className='w-1/2 flex flex-col gap-2'>
             <div className='bg-blue-300 border-l-4 py-4 px-2 border-blue-600 flex items-center'>
                 <h2 className="text-2xl font-bold h-6">Original JSON</h2>
             </div>
             <pre className="bg-gray-100 p-4 mb-4 h-[100vh] overflow-scroll text-black">{JSON.stringify(jsonData, null, 2)}</pre>
             </div>
-        )}
+        )} */}
         {jsonData && (
-            <div className='w-1/2 flex flex-col gap-2'>
+            <div className='w-full flex flex-col gap-2'>
             <div className='flex w-full justify-between bg-blue-300 border-l-4 items-center border-blue-600 p-2'>
                 <h2 className="text-2xl font-bold h-6">Modified JSON</h2>
                 <button onClick={handleDownload} className="bg-blue-500 p-2 rounded flex gap-3 items-center group hover:bg-blue-700">
