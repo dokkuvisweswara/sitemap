@@ -102,7 +102,7 @@ export default function FormatListing() {
         </div>
         <br />
       <h1 className="text-3xl font-bold mb-4">Upload JSON to Format</h1>
-      <input className="cursor-pointer" type="file" accept=".json" onChange={handleFileUpload} className="mb-4" />
+      <input className="cursor-pointer mb-4" type="file" accept=".json" onChange={handleFileUpload} />
       <div className='flex gap-4'>
         {jsonContent && (
             <div className='w-1/2 flex flex-col gap-2'>
