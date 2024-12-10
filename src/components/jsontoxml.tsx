@@ -56,7 +56,7 @@ export default function JsonToXml({params}: any) {
     return (
         <div className='flex flex-col gap-4 py-2'>
             <h1>Upload JSON and Convert to Sitemap</h1>
-            <input type="file" accept=".json" onChange={handleFileUpload} />
+            <input className="cursor-pointer" type="file" accept=".json" onChange={handleFileUpload} />
             {xmlContent && (
                 <div className='w-full'>
                     <div className="flex items-center justify-between bg-green-200 border-l-8 border-green-700 p-3 w-full">
@@ -71,7 +71,7 @@ export default function JsonToXml({params}: any) {
                     </button>
                     </div>
                     <br />
-                    <textarea value={xmlContent} readOnly rows={20} cols={80} className='w-full'></textarea>
+                    <textarea value={xmlContent} readOnly rows={20} cols={80} className='w-full text-black'></textarea>
                     <br />
                 </div>
             )}

@@ -25,17 +25,22 @@ export default function FormatListing() {
   const modifyJsonData = async (data: any) => {
     let ModifiedConfigData:any = [];
     if(activeCategory === 'image'){
-      data?.map(async (item: any) => {
+      let filterMovieCategoryData = data?.filter(async (item: any) => {
+        if(item?.category == "MOVIE") {
+          return item;
+        }
+      });
+      filterMovieCategoryData?.map(async (item: any) => {
         let modifiedItem: any = {};
         // currently we are doing for only MOVIES later we can do for TVSHOWS NATAK MUSIC as well
-        if(item?.category == "MOVIE") {
+        // if(item?.category == "MOVIE") {
           let title = await spacialCharEncoding(item.title ? item.title : '');
           let idobject = (item['objectid']).toLowerCase();
-          modifiedItem['loc'] = `https://www.ultrajhakaas.com/${item.category}/${title}/${idobject}`;
+          modifiedItem['loc'] = `https://www.ultrajhakaas.com/${item?.category.toLowerCase()}/${title}/${idobject}`;
           let poster = `https://d17a0cnlv8m3x8.cloudfront.net/POSTER/${item.idposter}_${item.postertype}_${item.quality}.jpg`;
           modifiedItem['image:image'] = { 'image:loc': poster };
           ModifiedConfigData.push(modifiedItem);
-        }
+        // }
       });
     } else {
       data?.map(async (item: any) => {
@@ -97,14 +102,14 @@ export default function FormatListing() {
         </div>
         <br />
       <h1 className="text-3xl font-bold mb-4">Upload JSON to Format</h1>
-      <input type="file" accept=".json" onChange={handleFileUpload} className="mb-4" />
+      <input className="cursor-pointer" type="file" accept=".json" onChange={handleFileUpload} className="mb-4" />
       <div className='flex gap-4'>
         {jsonContent && (
             <div className='w-1/2 flex flex-col gap-2'>
             <div className='bg-blue-300 border-l-4 py-4 px-2 border-blue-600 flex items-center'>
                 <h2 className="text-2xl font-bold h-6">Original JSON</h2>
             </div>
-            <pre className="bg-gray-100 p-4 mb-4 h-[100vh] overflow-scroll">{JSON.stringify(jsonContent, null, 2)}</pre>
+            <pre className="bg-gray-100 p-4 mb-4 h-[100vh] overflow-scroll text-black">{JSON.stringify(jsonContent, null, 2)}</pre>
             </div>
         )}
         {modifiedJson && (
@@ -120,7 +125,7 @@ export default function FormatListing() {
                     <span className='group-hover:text-white'>Download Modified JSON</span>                
                 </button>
             </div>
-            <pre className="bg-gray-100 p-4 mb-4 h-[100vh] overflow-scroll">{JSON.stringify(modifiedJson, null, 2)}</pre>
+            <pre className="bg-gray-100 p-4 mb-4 h-[100vh] overflow-scroll text-black">{JSON.stringify(modifiedJson, null, 2)}</pre>
             </div>
         )}
       </div>
