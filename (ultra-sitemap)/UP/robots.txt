@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /en/
 Disallow: /hi/
-Disallow: /movie/
 Disallow: /series/
 Disallow: /hindi-movies
 Disallow: /hindi-movies/
@@ -22,3 +21,6 @@ Disallow: /language/
 Disallow: /productionyear/
 Disallow: /play
 Disallow: /search*
+Sitemap: https://www.ultraplay.in/sitemap.xml
+Sitemap: https://www.ultraplay.in/static-sitemap.xml
+Sitemap: https://www.ultraplay.in/movies-listing-sitemap.xml
